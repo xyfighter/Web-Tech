@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+    <body>
+        <script language = "JavaScript">
+            function viewXML(form)
+            {
+                var submittedURL = form.URL.val;
+                var xhttp;
+
+                if (window.XMLHttpRequest) {
+                    xhttp = new XMLHttpRequest();
+                    } 
+                else {
+                    // code for IE6, IE5
+                    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xhttp.open("GET", submittedURL, false);
+                xhttp.send();
+                xmlDoc = xhttp.responseXML;
+                
+//                if(window.ActiveXObejct){
+//                    if(xmlDoc.parseError.errorCode){      
+//                        var myErr = xmlDoc.parseError;
+//                         hWin = window.open("", "Error", "height=300, width=400");
+//                        hWin.document.write(myErr);
+//                    }
+//                    else{
+//                    var html_text = generateHTML(xmlDoc);
+//                    hWin = window.open("","Assignment4", "height=800,width=600");
+//                    hWin.document.write(html_text);
+//                    }
+//                }
+//                else{
+//                xmlDoc.onload = generateHTML(xmlDoc);
+//                hWin = window.open("", "Assignment4", "height=800, width=600");
+//                hWin.document.write(html_text);
+//                }
+            }
+            
+//            function generateHTML(xmlDoc){
+//               workbook = xmlDoc.getElementsByTagName("Workbook");
+//            }
+        </script>
+        <h1> Enter URL for Company List XML File</h1>
+        <form name="XMLURL" method="post" id="XMLURL">
+            <input type="text" name="URL"/>
+            <br/>
+            <input type ="button" name ="submit" value= "Submit Query" onclick="viewXML(this.form)"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/background.png);
+    background-repeat: repeat-x;
+    background-color: rgb(252,251,239);
+    font-family: serif, "Times New Roman";
+    
+}
+.whole{
+    margin: 0 auto;
+    position: relative;
+    vertical-align: middle;
+    width: 940px;
+    height: auto;
+    
+}
+.topBanner{
+    margin:0 auto;
+    background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/main.jpg);
+    width:900px;
+    height: 354px;
+}
+
+div .bannerHeader{
+    margin-top:0;
+    position:relative;
+    left: 550px;
+    top:200px;
+    width: 350px;
+}
+
+.bannerHeader h1{
+    margin-top:0;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.bannerHeader h1 .yellow{
+    color: rgb(172,156,0);
+}
+.bannerHeader h1 .flower{
+    color: rgb(244,220,86);
+}
+.bannerHeader h2{
+    margin-top: 0px;
+    font-size: 22px;
+    color: rgb(120,109,0);
+}
+
+nav ul{
+    align-content: center;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li{
+    float:left;
+    margin: 15px 60px 15px 40px;
+}
+
+nav a{
+    color:black;
+    font-weight: bold;
+}
+nav a:hover{
+    color:yellow;
+}
+nav a:link{
+    text-decoration: none;
+}
+.navigation{
+    margin:0 auto 0 0;
+    background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/menu.png);
+    width:940px;
+    height:69px;
+    
+}
+
+.mainContext{
+    margin:0 auto 0;
+    background-color: white;
+    width: 880px;
+    padding:0px 10px 10px 10px;
+
+}
+
+article h1{
+    margin: 0 auto 40px;
+    font-size: 21px;
+}
+
+article h2{
+    margin-bottom: 3px;
+    font-size: 17px;
+}
+
+article p{
+    margin-top: 3px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.mainContext a{
+    text-decoration: none;
+    color: rgb(229,210,0);
+    
+}
+
+footer{
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+

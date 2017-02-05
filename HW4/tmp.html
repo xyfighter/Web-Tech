@@ -1,0 +1,39 @@
+<SCRIPT language = "JavaScript">
+        function generateHTML(xmlDoc){
+            root = xmlDoc.documentElement;
+        }
+        function loadXML(url){
+             if(window.XMLHttpRequest)
+                 xmlhttp = new XMLHttpRequest();             
+            else
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            xmlhttp.open("GET", url, false);
+            xmlhttp.send();
+            xmlDoc = xmlhttp.responseXML;
+            return xmlDoc;    
+        }
+        function viewXML(what){
+            var URL = what.URL.val;
+            xmlDoc = loadXML(URL);
+            if(window.ActiveXObejct){
+                if(xmlDoc.parseError.errorCode){
+                    var myErr = xmlDoc.parseError;
+                    generateError(xmlDoc);
+                    hWin = window.open("", "Error", "height=300, width=600");
+                    
+d                }
+                else{
+                    generateHTML(xmlDoc);
+                    hWin = window.open("","Assignment4", "height=800,width=600");
+                    hWin.document.write(html_text);
+                }
+            }
+            else{
+                xmlDoc.onload = generateHTML(xmlDoc);
+                hWin = window.open("", "Assignment4", "height=800, width=600");
+                hWin.document.write(html_text);
+            }
+            hWin.document.close();
+            
+        }
+        </SCRIPT>
